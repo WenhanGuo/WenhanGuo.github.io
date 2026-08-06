@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Placeholder academic profile website."
+    />
+    <title>Your Name | About</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="masthead">
+      <nav class="nav-wrap" aria-label="Primary navigation">
+        <a class="site-name" href="#about">Your Name</a>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links">
+          <span class="sr-only">Toggle navigation</span>
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a href="#about">About</a>
+          <a href="#news">News</a>
+          <a href="assets/cv.pdf">CV</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <aside class="profile" aria-label="Profile">
+        <div class="avatar" aria-label="Placeholder for your profile photo">
+          <span>YN</span>
+        </div>
+        <h1>Your Name</h1>
+        <p class="role">Your role at Your University</p>
+
+        <button class="follow-button" type="button" aria-expanded="true" aria-controls="profile-links">
+          Connect <span aria-hidden="true">+</span>
+        </button>
+        <ul class="profile-links" id="profile-links">
+          <li><span class="icon">⌂</span> Your Department</li>
+          <li><a href="mailto:you@example.com"><span class="icon">✉</span> Email</a></li>
+          <li><a href="https://scholar.google.com/" target="_blank" rel="noreferrer"><span class="icon">▣</span> Google Scholar</a></li>
+          <li><a href="https://github.com/your-github-username" target="_blank" rel="noreferrer"><span class="icon">⌘</span> GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/your-linkedin-username" target="_blank" rel="noreferrer"><span class="icon">in</span> LinkedIn</a></li>
+        </ul>
+      </aside>
+
+      <article class="content">
+        <section id="about">
+          <p class="eyebrow">Academic profile</p>
+          <h2>About Me</h2>
+          <p>
+            I am a <strong>[your role]</strong> in <a href="#">[your department]</a> at
+            <a href="#">[your university or organization]</a>. Use this space for a concise introduction:
+            what you study, build, or care about, and the people or groups you work with.
+          </p>
+          <p>
+            Previously, I was a <strong>[previous role]</strong> at <a href="#">[organization]</a>.
+            I earned my <strong>[degree]</strong> from <a href="#">[institution]</a>. My current work
+            explores <strong>[your core research or professional interests]</strong>.
+          </p>
+          <p>
+            You can find my publications, projects, or writing through the links in the profile panel.
+          </p>
+        </section>
+
+        <section id="news" class="news-section">
+          <p class="eyebrow">Updates</p>
+          <h2>News</h2>
+          <h3>2026</h3>
+
+          <div class="news-list">
+            <article class="news-item">
+              <time datetime="2026-08-01">August 01, 2026</time>
+              <p><strong>Placeholder update:</strong> Share a new paper, project launch, award, talk, or milestone here.</p>
+            </article>
+            <article class="news-item">
+              <time datetime="2026-05-15">May 15, 2026</time>
+              <p><strong>Placeholder update:</strong> Add a short description and link to the relevant work or announcement.</p>
+            </article>
+            <article class="news-item">
+              <time datetime="2026-02-03">February 03, 2026</time>
+              <p><strong>Placeholder update:</strong> Keep entries brief so visitors can scan your recent work.</p>
+            </article>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <div>
+        <a href="#about">Your Name</a> · <a href="https://github.com/your-github-username">GitHub</a>
+      </div>
+      <p>© <span id="year"></span> Your Name. Built as an editable academic profile.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

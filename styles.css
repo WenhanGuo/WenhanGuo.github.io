@@ -1,0 +1,98 @@
+:root {
+  --ink: #222;
+  --muted: #6c6c6c;
+  --line: #e8e8e8;
+  --accent: #4d7fa8;
+  --paper: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; line-height: 1.72; font-size: 16px; }
+a { color: var(--accent); text-decoration: none; }
+a:hover, a:focus-visible { text-decoration: underline; }
+
+.masthead { border-bottom: 1px solid var(--line); }
+.nav-wrap {
+  width: min(100% - 48px, 1200px);
+  min-height: 74px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-name { color: var(--ink); font-size: 1.1rem; font-weight: 700; letter-spacing: -.01em; }
+.nav-links { display: flex; gap: 27px; align-items: center; }
+.nav-links a { color: #555; font-size: .94rem; }
+.menu-button { display: none; border: 0; background: none; padding: 6px; }
+.menu-button span:not(.sr-only) { display: block; width: 21px; height: 2px; background: var(--ink); margin: 4px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+.page-shell {
+  width: min(100% - 48px, 1200px);
+  margin: 58px auto 90px;
+  display: grid;
+  grid-template-columns: 250px minmax(0, 760px);
+  gap: clamp(56px, 9vw, 130px);
+}
+.profile { align-self: start; }
+.avatar {
+  width: 204px;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(145deg, #dbe8ed, #bacbd1);
+  border-radius: 3px;
+  border: 1px solid #b8c9cf;
+  color: #526b74;
+  font: 600 3.1rem Georgia, serif;
+  letter-spacing: -.08em;
+}
+.profile h1 { margin: 18px 0 0; font: 700 1.28rem/1.2 Georgia, serif; }
+.role { color: #555; font-size: .91rem; line-height: 1.45; margin: 7px 0 16px; }
+.follow-button {
+  border: 1px solid #ddd;
+  color: #555;
+  background: #fafafa;
+  padding: 6px 11px;
+  border-radius: 3px;
+  font-size: .78rem;
+  cursor: pointer;
+}
+.follow-button:hover { background: #f3f3f3; }
+.profile-links { list-style: none; padding: 0; margin: 14px 0; font-size: .9rem; line-height: 1.86; }
+.profile-links.is-hidden { display: none; }
+.profile-links li { color: #555; }
+.profile-links a { color: #555; }
+.icon { display: inline-block; width: 22px; color: #777; text-align: center; font-weight: 700; font-size: .83rem; }
+
+.content { max-width: 760px; }
+.content section { scroll-margin-top: 28px; }
+.eyebrow { color: var(--accent); font-size: .73rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; margin: 0 0 2px; }
+h2 { font: 700 2rem/1.18 Georgia, "Times New Roman", serif; margin: 0 0 20px; letter-spacing: -.025em; }
+.content p { margin: 0 0 18px; }
+.news-section { margin-top: 68px; }
+.news-section h3 { font: 700 1.18rem/1.3 Georgia, serif; padding-bottom: 11px; margin: 28px 0 0; border-bottom: 1px solid var(--line); }
+.news-list { margin: 0; }
+.news-item { display: grid; grid-template-columns: 142px 1fr; gap: 20px; padding: 21px 0; border-bottom: 1px solid var(--line); }
+.news-item time { color: var(--muted); font-size: .82rem; padding-top: 2px; white-space: nowrap; }
+.news-item p { margin: 0; }
+
+footer { width: min(100% - 48px, 1200px); margin: 0 auto; padding: 25px 0 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: .78rem; }
+footer p { margin: 5px 0 0; }
+
+@media (max-width: 760px) {
+  .nav-wrap, .page-shell, footer { width: min(100% - 36px, 560px); }
+  .nav-wrap { min-height: 62px; position: relative; }
+  .menu-button { display: block; }
+  .nav-links { display: none; position: absolute; z-index: 2; right: 0; top: 54px; flex-direction: column; align-items: stretch; min-width: 140px; gap: 0; padding: 8px 0; background: white; border: 1px solid var(--line); box-shadow: 0 8px 18px rgba(0,0,0,.06); }
+  .nav-links.is-open { display: flex; }
+  .nav-links a { padding: 8px 15px; }
+  .page-shell { display: block; margin-top: 38px; }
+  .profile { padding-bottom: 30px; border-bottom: 1px solid var(--line); margin-bottom: 39px; }
+  .avatar { width: 130px; }
+  .news-item { grid-template-columns: 1fr; gap: 5px; }
+}
